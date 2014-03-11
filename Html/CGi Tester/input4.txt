@@ -1,0 +1,42 @@
+{
+    "displayValue" : "Views",
+    "expanded" : true,
+    "items" : [
+		    {
+		    	"displayValue" : "Main View",
+		    	"expanded" : true,
+		    	"ftype" : "Viewport",
+		    	"id" : "MainViewContainer_BCA",
+		    	"layout" : "Border",
+		    	"xtype" : "container",
+		    	"items" :[{
+		    		"id" : "form1",
+		    		"ftype" : "formpanel",
+		    		"xtype" : "form"	
+		    	},{
+		    		"id" : "form2",
+		    		"ftype" : "formpanel",
+		    		"xtype" : "form"	
+		    	}
+		    	]	
+		    },
+		    {
+		    	"displayValue" : "Second View",
+		    	"expanded" : true,
+		    	"ftype" : "Viewport",
+		    	"id" : "DecondViewContainer_BCA",
+		    	"layout" : "Border",
+		    	"xtype" : "container",
+		    	"items" :[{
+		    		"id" : "form3",
+		    		"ftype" : "formpanel",
+		    		"xtype" : "form"	
+		    	},{
+		    		"id" : "form4",
+		    		"ftype" : "formpanel",
+		    		"xtype" : "form"	
+		    	}
+		    	]	
+		    }
+    ]
+}

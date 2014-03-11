@@ -1,0 +1,11 @@
+{
+    "view" : [
+        {   "name" : "MainView",
+            "body" : "{ 'hello' : 'world' }"
+        },
+        {   
+            "name" : "SecondView",
+            "body" : "{ 'good' : 'night' }"
+        }
+    ]
+}

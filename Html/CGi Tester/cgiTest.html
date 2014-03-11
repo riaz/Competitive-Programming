@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Cgi Script Test</title>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+   					//$("#open").click(function() {
+       				$.ajax({
+       					    headers: {
+       					    	         "Access-Control-Allow-Origin"  : "*", 
+       					    	         "Access-Control-Allow-Methods" : "GET, POST, PUT, DELETE",
+										 "Access-Control-Allow-Headers" : "Authorization"
+       								 },
+       					    url : "input1.txt",       				 		
+           					dataType: "text",
+           					success : function (data) {
+               					$("#text").text(data);
+           	}
+       //});
+   		    });
+        }); 
+		</script>
+		<script type="text/javascript">
+			// $("#file").change(function() {
+			// 	console.log("dfdsfdsfds");
+			// });
+			function getComboA(sel) {
+    				var  value = sel.options[sel.selectedIndex].value;  
+    				$.ajax({
+       				 		url : value,
+       				 		headers: {
+       					    	         "Access-Control-Allow-Origin"  : "*", 
+       					    	         "Access-Control-Allow-Methods" : "GET, POST, PUT, DELETE",
+										 "Access-Control-Allow-Headers" : "Authorization"
+       								 },
+           					dataType: "text",
+           					success : function (data) {
+               					$("#text").text(data);
+           			}
+           		});
+			}
+		</script>		
+	</head>
+	<body>
+		<div style="border:1px dashed #000000">
+		<form method="GET" action="http://localhost/cgi-bin/cgitest.cgi">
+		    <div style="background-color:#aaaaaa;color:#ffffff"><h3>CGI Code Tester</h3></div>
+			<div style="background-color:#dddddd"><textarea id="text" name="json" rows="10" cols="80"></textarea></div>
+			<div style="background-color:#eeeeee">
+					<input type="submit" value="Submit"/>
+					<select id="file" onchange="getComboA(this)">
+					  <option value="input1.txt">input1.txt</option>
+					  <option value="input2.txt">input2.txt</option>
+					  <option value="input3.txt">input3.txt</option>
+					  <option value="input4.txt">input4.txt</option>
+					</select>
+			</div>
+		</form>
+		</div>
+
+	</body>
+</html>

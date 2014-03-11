@@ -1,0 +1,17 @@
+{
+    "dispValue": "Controllers",
+    "expanded": true,
+    "items": [
+        {
+            "dispValue": "Main controller",
+            "items": [
+                {
+                    "dispValue" : "Hello",
+                    "views": ['MainView'],
+                    "init": "function(){ var me = this; this.controls({'#comp':{click:this.button_click}});}",
+                    "button_click": "function(){alert('yes');}"
+                }
+            ]
+        }
+    ]
+}
