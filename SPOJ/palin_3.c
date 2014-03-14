@@ -41,7 +41,7 @@ int main(void) {
 				printf("%c",str[i]);
 			
 		}
-		// printf("Mid : %c\n",str[mid]);
+		printf("Mid : %c\n",str[mid]);
 		printf("\n");
 	}
 	return 0;
