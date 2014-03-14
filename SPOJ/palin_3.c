@@ -44,7 +44,12 @@ int main(void) {
 				for(i=mid;i>=0;i--)
 				printf("%c",str[i]);
 			}else{
-				
+				printf("1");
+				for(i=0;i<mid;i++)
+				printf("%c",str[i]);
+				for(i=mid;i>=0;i--)
+				printf("%c",str[i]);	
+				printf("1");
 			}
 			
 			}
