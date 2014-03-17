@@ -1,63 +1,37 @@
 #include <stdio.h>
-#define SIZE 100005
-
-void quicksort(int x[],int first,int last){
-    int pivot,j,temp,i;
-
-     if(first<last){
-         pivot=first;
-         i=first;
-         j=last;
-
-         while(i<j){
-             while(x[i]<=x[pivot]&&i<last)
-                 i++;
-             while(x[j]>x[pivot])
-                 j--;
-             if(i<j){
-                 temp=x[i];
-                  x[i]=x[j];
-                  x[j]=temp;
-             }
-         }
-
-         temp=x[pivot];
-         x[pivot]=x[j];
-         x[j]=temp;
-         quicksort(x,first,j-1);
-         quicksort(x,j+1,last);
-
-    }
-}
+#define SIZE 100000
 
 int main(){
-	int T,n,i,j;
-	int num;
-	int arr[SIZE];
-
-	int  count;
-	int prev;
-
+	int T,i,j,temp;
+//	int arr[SIZE];
+	unsigned long long num,num2;
 	scanf("%d",&T);
-	
 	while(T--){
-		count = 0;
-		scanf("%d",&num);
-		for(i=0;i<num;i++)scanf("%d",&arr[i]); 
-		quicksort(arr,0,num-1);
-
-		prev = -1;
-		j=0;
-		for(i=0;i<num;i++){
-			if(arr[i]==prev || arr[i] == 1)continue;
-			else{
-				arr[j]= arr[i];
-				prev = arr[i];
-				j++;
-			}		 
+//		count=0;
+		num2 = 0;
+		scanf("%llu",&num);
+		for(i=0;i<num;){ 
+			/*scanf("%d",&arr[i]); 
+			if(arr[i]==0 ||arr[i]==1 ){
+				num--;continue;
+			}
+			if(arr[i]==2) num2++;
+			else i++;*/							
+			scanf("%d",&temp); 
+			if(temp==0 ||temp==1 ){
+				num--;continue;
+			}
+			if(temp==2) num2++;
+			i++;
 		}
-	
-		printf("%d\n",(j*(j-1))/2); 				
+				
+		/*for(i=0;i<num-1;i++){
+			for(j=i+1;j<num;j++)
+			if((arr[i] + arr[j])!= 4)
+				count++;				
+		}*/
+		printf("%llu\n",(num*(num-1)/2) - (num2*(num2-1)/2));
+//		printf("%llu",num2);
 	}
 	return 0;
 }
