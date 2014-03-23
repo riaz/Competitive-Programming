@@ -1,0 +1,23 @@
+=====================================================
+Creating Shortcuts in Ubuntu
+=====================================================
+
+To create shortcuts to important applications which you seldom use from the command-line requires
+you to install few additional packages and then run a special command to create a shortcut.
+
+1. Open a terminal  or press Ctrl+Alt+T
+2. sudo apt-get install --no-install-recommneds gnome-panel
+3. gnome-desktop-item-edit –-create-new ~/Desktop
+ 
+   Enter the description in the following manner:
+
+	Type: Application
+        Name: FreePascalIDE
+        Command: gnome-terminal --title="Free Pascal" --geometry=80x40 --hide-menubar -e fp-2.4.4
+        Comment: FreePascalIDE
+
+4. Press OK
+
+You will find a FreePascal Launcher icon in your desktop and play around it as any other application programs that comes pre-installed with
+the system.
+

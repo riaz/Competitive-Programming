@@ -1,0 +1,29 @@
+#include<stdio.h>
+#define SIZE 100
+
+int main(){
+	int n,i,j;
+	int min,temp;
+	int arr[SIZE];
+	min = 101;
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+		scanf("%d",&arr[i]);
+		if(arr[i] <min )min = arr[i];
+	}
+	for(i=n-2;i>=0;i--){
+		if(arr[i] > min){
+			for(j=n-1;j>i;j--){
+				temp = arr[j];
+				while(arr[i] > temp){
+					arr[i]--;
+					arr[j]++;
+				}
+			}
+		} 
+	}
+	for(i=0;i<n;i++)
+		printf("%d ",arr[i]);
+	printf("\n");
+	return 0;
+}

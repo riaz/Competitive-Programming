@@ -1,0 +1,13 @@
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=gnome-panel-launcher
+Name[en_US]=FreePascal
+Exec=gnome-terminal --title="Free Pascal" --geometry=80x40 --hide-menubar -e fp-2.4.4
+Comment[en_US]=FreePascal
+Name=FreePascal
+Comment=FreePascal
+Icon=gnome-panel-launcher
+GenericName[en_US.UTF-8]=Free Pascal IDE
