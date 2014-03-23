@@ -1,0 +1,24 @@
+/* carvans.c */
+
+#include <stdio.h>
+
+int main(){
+	int T,i,num;	
+        int t1;
+        int temp;
+
+	scanf("%d",&T);
+	
+	while(T--){
+		scanf("%d",&num);
+		t1 = 0;			
+		for(i=0;i<num;i++){
+			scanf("%d",&temp);
+                        if(t1)
+			if(temp>t1)num--;
+			t1 = temp;
+		}
+		printf("%d\n",num);
+	}
+	return 0;
+}
