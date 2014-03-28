@@ -1,0 +1,27 @@
+/*Coin Flip*/
+#include <stdio.h>
+
+int main(){
+	int T,g,s,c,q;
+	scanf("%d",&T);
+	while(T--){
+		scanf("%d",&g); //inputing the number of queries to be asked
+		while(g--){
+			scanf("%d%d%d",&s,&c,&q);
+			if(c%2==0){ //i.e even number
+				printf("%d",c/2); //irrespective of starting side
+			}else{
+				if(s == 1){	
+					if(q==1)printf("%d",(c-1)/2);
+					else printf("%d",(c+1)/2);
+				}else{
+				      	if(q==2)printf("%d",(c-1)/2);
+					else printf("%d",(c+1)/2);
+					
+				}
+			}
+		}
+	}
+
+	return 0;
+}
